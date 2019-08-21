@@ -1,2 +1,24 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="content">
+  <%= link_to 'back', restaurants_path %>
+  <h1><%= @restaurant.name %></h1>
+  <div class="restaurant-details">
+    <p><span class="font-weight-bold">Address:</span> <%= @restaurant.address %></p>
+    <p><span class="font-weight-bold">Phone number:</span> <%= @restaurant.phone_number %></p>
+  </div>
+
+  <div>
+    <p class="text-center"><span class="font-weight-bold">Reviews:</span></p>
+      <% if @restaurant.reviews.empty? %>
+        <p>this restaurant doesn't have any reviews yet! <%= link_to 'add one?', new_restaurant_review_path(@restaurant) %></p>
+      <% else %>
+        <%= link_to 'add a review?', new_restaurant_review_path(@restaurant), class: 'center' %>
+        <% @restaurant.reviews.each do |review| %>
+          <div class="review-details shadow p3">
+            <p><%= review.content %></p>
+            <p><%= review.rating %>/5</p>
+          </div>
+        <% end %>
+      <% end %>
+
+  </div>
+</div>

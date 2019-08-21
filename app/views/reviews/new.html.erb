@@ -1,2 +1,7 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="content">
+  <%= link_to 'back', @restaurant %>
+  <h1>Add a Review to <span class="font-weight-bold"><%= @restaurant.name %></span></h1>
+
+  <%= render 'review_form' %>
+
+</div>

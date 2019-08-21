@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'restaurants#index'
   get 'restaurants', to: 'restaurants#index'
   get 'restaurants/new', to: 'restaurants#new'
   post 'restaurants', to: 'restaurants#create'

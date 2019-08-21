@@ -1,0 +1,23 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: monospace;
+}
+
+.content {
+  margin: 30px;
+}
+
+.restaurant-tile {
+  height: 80px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.restaurant-tile a {
+  margin-right: 20px;
+}

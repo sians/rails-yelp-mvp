@@ -12,6 +12,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar navbar-dark bg-dark">
+      <%= link_to 'home', restaurants_path, class: 'navbar-brand' %>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
